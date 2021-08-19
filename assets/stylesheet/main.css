@@ -11,7 +11,9 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color:rgb(13, 8, 20);
     overflow: hidden;
+   
 }
 
 .container
@@ -92,23 +94,25 @@ body{
 }
 .grass
 {
-    width: 100%;
+    width: 130%;
     position: absolute;
     z-index: 1000;
-    bottom: 0;
+    bottom: -120px;
     transform: translateY(300px);
     filter: brightness(0.5);
     -webkit-filter: brightness(0.5);
+   
 }
 .grass2
 {
-    width: 100%;
+    width: 130%;
     position: absolute;
     z-index:-1;
-    bottom: 100px;
+    bottom: 90px;
     transform: translateY(300px);
     filter: brightness(0.5);
     -webkit-filter: brightness(0.5);
+    
 }
 .night
 {
@@ -116,10 +120,52 @@ body{
     z-index: -2;
     width: 100%;
 }
+.moon
+{   
+    width: 400px;
+    height: 400px;
+    background:url(../image/monn.png);
+    background-size: cover;
+    position: absolute;
+    right: 0;
+    top:100px;
+    mix-blend-mode: overlay;
+    opacity: .9;
+}
+
 .night .city
 {
-    width: 100%;
+    width: 130%;
     background: url(../image/city.png);
     height: 1000px;
     margin-top: 100px;
+    filter: brightness(0.5);
+    -webkit-filter: brightness(0.5);
+
+}
+.star
+{
+    position: absolute;
+    z-index: -10;
+    top:0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: url(../image/stars.png);
+    animation: scaleE 1s infinite;
+    -webkit-animation:  scaleE 1s infinite;
+}
+
+@keyframes scaleE {
+    0%{
+        transform: scale(1); 
+       
+    }
+    100%
+    {
+        transform: scale(1.5); 
+       
+    }
 }
